@@ -1,0 +1,26 @@
+<html> 
+<head>
+	<title>Exercicios com Date </title>
+	
+	<script type="text/javascript">
+		function time()
+		{
+			today = new Date();
+			h = today.getHours();
+			m = today.getMinutes();
+			s = today.getSeconds();
+			
+			document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+			setTimeout('time()', 1000);
+		
+		}
+	
+	</script>
+</head>
+
+<body onload = "time ()">
+	<div id = "txt"> </div>
+</body>
+
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Cálculo de Salário Líquido</title>
+
+    <script>
+        function calcularINSS() {
+
+            var sbruto = document.getElementById("sbruto").value;
+
+            if (sbruto <= 1693) {
+
+                var INSS = sbruto * 8 / 100;
+
+                var valorIR1 = sbruto - INSS;
+
+                window.alert("Salario com desconto do INSS: " + valorIR1);
+                calcularIRRF(valorIR1);
+            } else if (sbruto > 1694 && sbruto <= 2882) {
+
+                    
+                var INSS = sbruto * 9 / 100;
+
+                var valorIR1 = sbruto - INSS;
+
+                window.alert("Salario com desconto do INSS: " + valorIR1);
+                calcularIRRF(valorIR1);   
+            } else if (sbruto > 2883 && sbruto <= 5645) {
+
+                   
+                var INSS = sbruto * 11 / 100;
+
+                var valorIR1 = sbruto - INSS;
+
+                window.alert("Salario com desconto do INSS: " + valorIR1);
+                calcularIRRF(valorIR1);   
+            } else if (sbruto > 5646) {
+
+                   
+                var valorIR1 = sbruto - 621;
+
+                window.alert("Salario com desconto do INSS: " + valorIR1);
+
+                calcularIRRF(valorIR1);
+            }
+
+
+        }
+
+
+        function calcularIRRF(valorIRI) {
+
+               
+            var dependentes = document.getElementById("dependentes").value;
+
+               
+            var IRRF = dependentes * 189;
+
+                
+            window.alert("Valor total da quantidade de dependentes: " + IRRF);
+
+            calcularSalarioLiquido(valorIRI, IRRF);   
+        }
+
+           
+
+        function calcularSalarioLiquido(valorIR1, IRRF) {
+
+               
+            var result = valorIR1 - IRRF;
+
+            
+            window.alert("Seu salário liquido é: " + result);      
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Calcule seu salário liquido</h2>
+
+    <form>
+
+        <label for="nsalario">Salário bruto:</label>          
+        <input type="text" id="sbruto" /><br>          
+
+        <br><label for="nsalario">Número de dependentes:</label>          
+        <input type="text" id="dependentes" /><br>          
+        
+        <br><label for="nsalario">Seu salário líquido é:</label>          
+        <input type="submit" onClick="calcularINSS()"><br>
+
+
+    </form>
+ 
+
+</body>
+
+</html>

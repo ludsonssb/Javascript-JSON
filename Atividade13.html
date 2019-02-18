@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Trabalhando com JSON</title>
+<script>
+		var filmes = [ 
+			{
+				"Titulo":" Procurando Nemo",
+				"Resumo":"Após perder a esposa e toda a ninhada, Marlin passa"+
+				"a criar sozinho seu único filho Nemo com todo o cuidado"+
+				"do mundo nos recifes de coral.",
+				"Ano":2003,
+				"Genero": ["Ação"," Animação"]
+			},
+			
+			{
+				"Titulo":"Amnesia",
+				"Resumo":"Um ladrão ataca um casal mata a mulher e deixa o homem a beira da morte."+
+				"O marido sobrevive, mas deixa de gravar memorias recentes"+
+				"do mundo nos recifes de coral.",
+				"Ano":2000,
+				"Genero": ["Ação"," Realidade"]
+			}
+			]
+			
+			window.document.writeln("<p>");
+			window.document.writeln("-- Filmes ( Poisição 0) <br>");
+			window.document.writeln(filmes[0]["Titulo"]+ "<br>");
+			window.document.writeln(filmes[0]["Resumo"]+ "<br>");
+			window.document.writeln(filmes[0]["Ano"]+ "<br>");
+			window.document.writeln(filmes[0]["Genero"]+ "<br>");
+			window.document.writeln("</p>");
+			
+			window.document.writeln("<p>");
+			window.document.writeln("-- Filmes ( Poisição 1) <br>");
+			window.document.writeln(filmes[1]["Titulo"]+ "<br>");
+			window.document.writeln(filmes[1]["Resumo"]+ "<br>");
+			window.document.writeln(filmes[1]["Ano"]+ "<br>");
+			window.document.writeln(filmes[1]["Genero"]+ "<br>");
+			window.document.writeln("</p>");
+			
+			window.document.writeln("Utilizando o forEach <br>");
+			window.document.writeln("<br>");
+			
+			
+			for (var key in filmes) {
+				//window.document.writeln(filmes[0]);
+				window.document.writeln(filmes[key]["Titulo"]+ "<br>");
+				window.document.writeln(filmes[key]["Resumo"]+ "<br>");
+				window.document.writeln(filmes[key]["Ano"]+ "<br>");
+				window.document.writeln(filmes[key]["Genero"]+ "<br>");
+				window.document.writeln("</p>");
+ }
+			window.document.writeln("Utilizando for <br>");
+			window.document.writeln("<br>");
+ 
+			for (var i=0, len=filmes.length; i<len; i++) {
+				//window.document.writeln(filmes[0]);
+				window.document.writeln(filmes[i]["Titulo"]+ "<br>");
+				window.document.writeln(filmes[i]["Resumo"]+ "<br>");
+				window.document.writeln(filmes[i]["Ano"]+ "<br>");
+				window.document.writeln(filmes[i]["Genero"]+ "<br>");
+				window.document.writeln("</p>");
+ }
+			
+			window.document.writeln("testando algo <br>");
+			window.document.writeln("<br>");
+			
+		/*var allFilmes =  new Array(2); 
+    				
+		allFilmes[0] = {filmes}; 
+		allFilmes[1] = {filmes}; 
+		
+		for ( var i = 0; i < allFilmes.length; i++ ){
+		
+		var film = allFilmes [i];
+		window.document.writeln("<p>Filme: " + film + " sei la");
+		
+		}*/	
+			
+</script>
+</head>
+
+<body>
+</body>
+
+</html>
+</html>

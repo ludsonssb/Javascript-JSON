@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title> Trabalhando com Array</title>
+		<script>
+			var arrayDia = new Array(7);
+			arrayDia[0] = "Domingo";
+			arrayDia[1] = "Segunda";
+			arrayDia[2] = "Terça";
+			arrayDia[3] = "Quarta";
+			arrayDia[4] = "Quinta";
+			arrayDia[5] = "Sexta";
+			arrayDia[6] = "Sábado";
+			
+			function retornaDiaSemana(dia){
+				return arrayDia[dia];
+			}
+		
+		</script>
+	</head>
+	<body>
+		Dia da semana: <br>
+		<div id = "titulo"/>
+		<br>
+		
+		<script type = "text/javascript">
+			window.document.writeln("Zero: " + retornaDiaSemana(0) + " <br>");
+			window.document.writeln("Um: " + retornaDiaSemana(1) + " <br>");
+			window.document.writeln("Dois: " + retornaDiaSemana(2) + " <br>");
+			window.document.writeln("Três: " + retornaDiaSemana(3) + " <br>");
+			window.document.writeln("Quatro: " + retornaDiaSemana(4) + " <br>");
+			window.document.writeln("Cinco: " + retornaDiaSemana(5) + " <br>");
+			window.document.writeln("Seis: " + retornaDiaSemana(6) + " <br>");
+		</script>
+
+	</body>
+</html>

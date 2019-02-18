@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Trabalhando com JSON</title>
+<script>
+		var filme = 
+			{
+				"Titulo":" Procurando Nemo",
+				"Resumo":"Após perder a esposa e toda a ninhada, Marlin passa"+
+				"a criar sozinho seu único filho Nemo com todo o cuidado"+
+				"do mundo nos recifes de coral.",
+				"Ano":2003,
+				"Genero": ["Ação","Animação"]
+			};
+			
+			window.document.writeln("<p>");
+			window.document.writeln("-- Filme ( exibe valor a valor) <br>");
+			window.document.writeln(filme["Titulo"] + "<br>");
+			window.document.writeln(filme["Resumo"] + "<br>");
+			window.document.writeln(filme["Ano"] + "<br>");
+			window.document.writeln(filme["Genero"] + "<br>");
+			window.document.writeln("</p>");
+			
+			window.document.writeln("<p>");
+			window.document.writeln("-- Filme (Converte o JSON para texto <br>");
+			//Converte o objeto JSON para texto e apresenta no browser
+			window.document.writeln(JSON.stringify(filme));
+			window.document.writeln("</p>");
+</script>
+</head>
+
+<body>
+</body>
+
+</html>

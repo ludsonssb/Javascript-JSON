@@ -1,0 +1,30 @@
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Trabalhando com JSON</title>
+<script>
+		var filmeTexto = '{"titulo":"Amnesia","resumo":"Um ladrão ataca um casal,' +
+						 ' mata a mulher e deixa o homem a beira da morte.'+
+						 'O marido sobrevive, mas deixa de gravar memorias recentes",'+
+						 '"ano":2000,"genero":["Ação"," Realidade"]}'
+		
+		//Converte o texto para um objeto JSON
+		
+		var filmeObject = JSON.parse(filmeTexto);
+						 						
+			window.document.writeln("<p>");
+			window.document.writeln("-- Filme (convertido de um texto para objeto) <br>");
+			window.document.writeln(filmeObject["titulo"] + "<br>");
+			window.document.writeln(filmeObject["resumo"] + "<br>");
+			window.document.writeln(filmeObject["ano"] + "<br>");
+			window.document.writeln(filmeObject["genero"] + "<br>");
+			window.document.writeln("</p>");
+			
+</script>
+</head>
+
+<body>
+</body>
+
+</html>

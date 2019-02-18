@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title> Trabalhando com Array carros</title>
+		<script>
+			var carros1 = new Array(3);
+			var carros2 = ["Fiat","Ferrari","Renault"];
+			var carros3 = new Array ("Ford","VW","Audi");
+			
+			carros1[0] = "Chevrolet"; 
+			carros1[1] = "Jeep";
+			carros1[2] = "BMW";
+			
+			window.document.writeln("<br>");
+			window.document.writeln("Carro2: " + carros2[2]);
+			window.document.writeln("<br>");
+			
+			window.document.writeln("Array Carros 1: <br>");
+			for(var i=0; i<carros1.length; i++){
+				window.document.writeln(carros1[i] + "<br>");
+			}
+			
+			window.document.writeln("Array Carros 2: <br>");
+			for(var i=0; i<carros2.length; i++){
+				window.document.writeln(carros2[i] + "<br>");
+			}
+			
+			carros3[3] = "Susuki";
+			carros3.sort();
+			window.document.writeln("Array Carros 3: <br>");
+			for(var i=0; i<carros3.length; i++){
+				window.document.writeln(carros3[i] + "<br>");
+			
+			}
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
